@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.16)
 project(SobelCam-Qt LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -43,4 +43,12 @@ target_link_libraries(SobelCam-Qt PRIVATE
 
 if(OpenMP_CXX_FOUND)
     target_link_libraries(SobelCam-Qt PRIVATE OpenMP::OpenMP_CXX)
+endif()
+
+if(MSVC)
+    target_compile_definitions(SobelCam-Qt PRIVATE
+        _SILENCE_ALL_MSVC_STL_DEPRECATION_WARNINGS
+        _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING
+    )
+    target_compile_options(SobelCam-Qt PRIVATE /Zc:__cplusplus)
 endif()
