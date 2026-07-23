@@ -18,6 +18,7 @@ jobs:
       uses: jurplel/install-qt-action@v3
       with:
         version: '6.5.0'
+        modules: 'qtmultimedia'
 
     - name: Configure CMake
       run: cmake -B build -DCMAKE_BUILD_TYPE=Release
