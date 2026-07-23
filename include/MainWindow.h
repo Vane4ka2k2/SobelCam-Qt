@@ -9,7 +9,7 @@
 #include <QVideoSink>
 #include <QVBoxLayout>
 #include "ProcessorWorker.h"
-#include "h/Image.h" // Твой класс
+#include "Image.h" // Твой класс
 
 class MainWindow : public QMainWindow
 {

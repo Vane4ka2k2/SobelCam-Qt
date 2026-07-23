@@ -1,4 +1,4 @@
-#include "../h/Image.h"
+#include "Image.h"
 #include <iostream>
 #include <cstring>
 #include <cmath>
@@ -6,10 +6,10 @@
 
 // Подключаем реализации библиотек STB
 #define STB_IMAGE_IMPLEMENTATION
-#include "../h/stb_image.h"
+#include "stb_image.h"
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "../h/stb_image_write.h"
+#include "stb_image_write.h"
 
 Image::Image() {}
 

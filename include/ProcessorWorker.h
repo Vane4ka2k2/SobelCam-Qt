@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QImage>
-#include "h/Image.h"
+#include "Image.h"
 
 class ProcessorWorker : public QObject
 {
